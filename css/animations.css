@@ -1,0 +1,75 @@
+/* Subtle academic motion — respects reduced-motion preferences */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 80ms;
+}
+
+.reveal-delay-2 {
+  transition-delay: 160ms;
+}
+
+.reveal-delay-3 {
+  transition-delay: 240ms;
+}
+
+.hero__portrait-frame {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero__portrait-wrap:hover .hero__portrait-frame {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(2, 40, 81, 0.12);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.pub-card,
+.news-card,
+.award-item,
+.leadership-card,
+.grant-card,
+.edition-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__portrait-wrap:hover .hero__portrait-frame,
+  .news-card:hover,
+  .btn:active {
+    transform: none;
+  }
+
+  #scroll-top {
+    transition: none;
+  }
+}

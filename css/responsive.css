@@ -1,0 +1,205 @@
+/* Responsive layout breakpoints: 375 / 768 / 1024 / 1440 */
+
+@media (max-width: 1100px) {
+  .nav__link {
+    padding: 0.4rem 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .brand__role {
+    max-width: 160px;
+  }
+
+  .expertise-grid,
+  .leadership-grid,
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .hero__portrait-wrap {
+    justify-self: center;
+    width: min(100%, 360px);
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-feature {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .highlights__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --header-h: 64px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: var(--header-h) 0 auto 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-4);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav__link {
+    padding: 0.75rem 0.85rem;
+    font-size: 1rem;
+    border-bottom: 0;
+  }
+
+  .header-cv {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .editions,
+  .scholarship-grid,
+  .tech-grid,
+  .news-grid,
+  .grants-grid,
+  .visiting-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .working-paper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-7) 0;
+  }
+
+  .hero {
+    padding: var(--space-5) 0;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .book-feature {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .book-feature .hero__actions,
+  .book-feature .contact-actions {
+    justify-content: center;
+  }
+
+  .book-cover {
+    max-width: 220px;
+  }
+
+  .expertise-grid,
+  .leadership-grid,
+  .service-grid,
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .award-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .award-item__year {
+    border-right: 0;
+    border-bottom: 2px solid var(--gold);
+    padding-right: 0;
+    padding-bottom: 0.35rem;
+    width: fit-content;
+  }
+
+  .contact-list li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .timeline-card__summary::after {
+    position: static;
+    margin-top: 0.5rem;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 1.25rem, var(--container));
+  }
+
+  .highlights__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .header-cv {
+    width: 100%;
+  }
+
+  .pub-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container: 1180px;
+  }
+}
