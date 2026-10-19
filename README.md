@@ -4,15 +4,9 @@ Independent, static academic portfolio website for **Dr. C. Janie Chang**, Acade
 
 This is a personal professional portfolio inspired by the visual language of the [UC Davis GSM faculty page](https://gsm.ucdavis.edu/faculty/c-janie-chang). It is **not** an official university website.
 
-**Production URL (GitHub Pages):** https://haseebshaik00.github.io/Janie-Portfolio/
+**Production URL (Vercel):** https://janiechang.vercel.app/
 
-## Pre-launch human checklist
-
-Code-side deploy readiness items (SEO URLs, robots/sitemap, Featured Research, hero cleanup) are in place. Before treating the site as a public professional launch, still confirm:
-
-- [ ] **Dr. Chang** has reviewed and approved content, first-person voice, and representation
-- [ ] **Image rights** for portrait, textbook cover, and news images (see [`assets/images/README.md`](assets/images/README.md))
-- [ ] If using a custom domain instead of GitHub Pages, update canonical / Open Graph / Twitter / `robots.txt` / `sitemap.xml` to that domain
+Vercel project dashboard: https://vercel.com/habz3371/janie-portfolio
 
 ## Tech stack
 
@@ -87,21 +81,12 @@ Current local files are development copies from public faculty/publisher sources
 
 ## Deploy
 
-### GitHub Pages
+### Vercel (current)
 
-1. Push this repository to GitHub (`main`).
-2. Settings → Pages → Source: Deploy from branch `main` / root.
-3. Site URL: https://haseebshaik00.github.io/Janie-Portfolio/
-4. SEO files already use that URL in `index.html`, `robots.txt`, and `sitemap.xml`.
-
-### Netlify (or custom domain)
-
-1. Connect the repository in Netlify.
-2. Build command: *(none)* — publish directory: repository root.
-3. Replace `https://haseebshaik00.github.io/Janie-Portfolio/` with the production domain in:
-   - `index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`)
-   - `robots.txt`
-   - `sitemap.xml`
+1. Project: https://vercel.com/habz3371/janie-portfolio
+2. Public site: https://janiechang.vercel.app/
+3. Framework preset: Other / static — no build command; publish repository root.
+4. SEO files already use the Vercel URL in `index.html`, `robots.txt`, and `sitemap.xml`.
 
 ## Primary sources
 

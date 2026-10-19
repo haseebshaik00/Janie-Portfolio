@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://haseebshaik00.github.io/Janie-Portfolio/sitemap.xml
+Sitemap: https://janiechang.vercel.app/sitemap.xml
