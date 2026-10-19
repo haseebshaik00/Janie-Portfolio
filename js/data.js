@@ -1222,8 +1222,6 @@ const PORTFOLIO_DATA = {
       { name: "UiPath Apps", year: 2021 },
       { name: "AICPA Data Analytics", year: 2021 },
     ],
-    philosophy:
-      "My teaching connects accounting theory with hands-on, professionally relevant learning—integrating systems, analytics, and emerging technologies so students develop judgment, technical fluency, and readiness for practice.",
   },
 
   leadership: [

@@ -491,7 +491,6 @@
     const panels = document.getElementById("expertise-panels");
     const tech = document.getElementById("tech-grid");
     const certs = document.getElementById("certificates");
-    const philosophy = document.getElementById("teaching-philosophy");
 
     if (interests) {
       clear(interests);
@@ -530,10 +529,6 @@
       data.teaching.certificates.forEach((c) => {
         certs.appendChild(el("li", "chip", `${c.name} (${c.year})`));
       });
-    }
-    if (philosophy) {
-      clear(philosophy);
-      philosophy.appendChild(el("p", null, data.teaching.philosophy));
     }
   }
 
