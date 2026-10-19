@@ -166,7 +166,17 @@
   }
 
   .site-footer__inner {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "tagline"
+      "updated"
+      "sources";
+  }
+
+  .site-footer__sources {
+    justify-self: start;
+    text-align: left;
   }
 }
 
