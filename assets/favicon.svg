@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Graduation cap">
+  <rect width="32" height="32" rx="6" fill="#022851"/>
+  <!-- Cap top / mortarboard -->
+  <path
+    fill="#FFBF00"
+    d="M16 6.2 4.8 11.4c-.45.2-.45.75 0 .96L16 17.5l11.2-5.14c.45-.21.45-.76 0-.96L16 6.2Z"
+  />
+  <!-- Cap base / headband -->
+  <path
+    fill="#FFBF00"
+    d="M8.2 14.1v5.1c0 1.9 3.4 3.5 7.8 3.5s7.8-1.6 7.8-3.5v-5.1l-7.8 3.55L8.2 14.1Z"
+    opacity="0.95"
+  />
+  <!-- Tassel cord -->
+  <path
+    fill="none"
+    stroke="#FFBF00"
+    stroke-width="1.4"
+    stroke-linecap="round"
+    d="M24.4 11.9c.1 1.8.55 3.1 1.35 3.9"
+  />
+  <!-- Tassel -->
+  <circle cx="26.2" cy="17.2" r="1.55" fill="#FFBF00"/>
+</svg>
