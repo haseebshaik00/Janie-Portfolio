@@ -777,6 +777,13 @@ svg.hero__link-icon {
   gap: var(--space-3);
 }
 
+.featured-grid {
+  max-height: min(28rem, 55vh);
+  overflow-y: auto;
+  padding-right: 0.35rem;
+  scrollbar-gutter: stable;
+}
+
 .featured-block {
   margin-bottom: var(--space-6);
 }
@@ -1068,6 +1075,10 @@ svg.hero__link-icon {
 .awards-list {
   display: grid;
   gap: var(--space-3);
+  max-height: min(28rem, 55vh);
+  overflow-y: auto;
+  padding-right: 0.35rem;
+  scrollbar-gutter: stable;
 }
 
 .award-item {
@@ -1209,7 +1220,8 @@ svg.hero__link-icon {
   flex-direction: column;
   background: var(--white);
   border: 1px solid var(--border);
-  padding: var(--space-5);
+  padding: 0;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   transition: transform var(--transition), box-shadow var(--transition),
@@ -1222,6 +1234,31 @@ svg.hero__link-icon {
   border-color: #c9d4e2;
   color: inherit;
   text-decoration: none;
+}
+
+.news-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(2, 40, 81, 0.06);
+}
+
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.news-card:hover .news-card__image {
+  transform: scale(1.03);
+}
+
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-5);
 }
 
 .news-card__meta {

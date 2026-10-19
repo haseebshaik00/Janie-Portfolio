@@ -7,6 +7,7 @@
 | `janie-chang-portrait.jpg` | Hero portrait | UC Davis GSM faculty photo (`Janie-GSM-2025-large.jpg`) |
 | `janie-chang-headshot.jpg` | Alternate/smaller headshot | UC Davis GSM faculty headshot |
 | `ais-textbook-cover.webp` | AIS 4th edition cover | McGraw Hill product image |
+| `news/*` | News & features card images | Featured images from linked GSM / AACSB / McGraw Hill pages |
 
 ## Licensing / approval required
 

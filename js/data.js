@@ -12,7 +12,7 @@ const PORTFOLIO_DATA = {
     affiliation: "UC Davis Graduate School of Management",
     headline: "Advancing Accounting Education Through Research, Technology & Leadership",
     introduction:
-      "Over three decades of experience connecting accounting research, audit analytics, information systems, and emerging technologies to professional practice.",
+      "Over three decades, I have connected accounting research, audit analytics, information systems, and emerging technologies to professional practice.",
     email: "cjchang@ucdavis.edu",
     phone: "(530) 752-0512",
     phoneTel: "+15307520512",
@@ -41,10 +41,10 @@ const PORTFOLIO_DATA = {
 
   about: {
     paragraphs: [
-      "Dr. C. Janie Chang is Academic Executive Director of the Master of Professional Accountancy (MPAc) program at the UC Davis Graduate School of Management.",
-      "Her expertise spans accounting information systems, audit analytics, managerial accounting, emerging technologies, financial reporting, human information processing, expert judgments, behavioral research, group decision making, and cross-cultural research.",
-      "Previously, she served at San Diego State University as Vern Odmark Professor of Accountancy and twice held the William E. Cole Director position in the Charles W. Lamden School of Accountancy. Earlier academic roles include San José State University and California State University San Marcos.",
-      "Across more than three decades in higher education, Dr. Chang has integrated professional accounting knowledge with technology, data analysis, experiential learning, and academic leadership—bridging practitioners, researchers, faculty, and students.",
+      "I am Academic Executive Director of the Master of Professional Accountancy (MPAc) program at the UC Davis Graduate School of Management.",
+      "My expertise spans accounting information systems, audit analytics, managerial accounting, emerging technologies, financial reporting, human information processing, expert judgments, behavioral research, group decision making, and cross-cultural research.",
+      "Previously, I served at San Diego State University as Vern Odmark Professor of Accountancy and twice held the William E. Cole Director position in the Charles W. Lamden School of Accountancy. Earlier academic roles include San José State University and California State University San Marcos.",
+      "Across more than three decades in higher education, I have integrated professional accounting knowledge with technology, data analysis, experiential learning, and academic leadership—bridging practitioners, researchers, faculty, and students.",
     ],
     researchExpertise:
       "Human information processing in accounting settings, behavioral issues in managerial accounting and auditing, nature of expert judgments, group decision making, accounting information systems, audit analytics, and cross-cultural research.",
@@ -223,7 +223,7 @@ const PORTFOLIO_DATA = {
     revised: "Revised July 2026",
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6188540",
     description:
-      "This working paper examines human–AI collaboration in accounting contexts, focusing on how domain expertise shapes contract-information extraction, verification practices, and the reliability of generative AI outputs. It is labeled as a working paper and is not counted among the 43 refereed CV entries.",
+      "This working paper (with Ayung Tseng) examines human–AI collaboration in accounting contexts, focusing on how domain expertise shapes contract-information extraction, verification practices, and the reliability of generative AI outputs. It is labeled as a working paper and is not counted among my 43 refereed CV entries.",
     tags: ["Artificial Intelligence", "Accounting Information Systems"],
   },
 
@@ -1224,7 +1224,7 @@ const PORTFOLIO_DATA = {
       { name: "AICPA Data Analytics", year: 2021 },
     ],
     philosophy:
-      "Dr. Chang’s teaching connects accounting theory with hands-on, professionally relevant learning—integrating systems, analytics, and emerging technologies so students develop judgment, technical fluency, and readiness for practice.",
+      "My teaching connects accounting theory with hands-on, professionally relevant learning—integrating systems, analytics, and emerging technologies so students develop judgment, technical fluency, and readiness for practice.",
   },
 
   leadership: [
@@ -1437,24 +1437,30 @@ const PORTFOLIO_DATA = {
       source: "UC Davis GSM",
       headline: "Celebrating Our 2026 Student and Teacher Award Honorees",
       description:
-        "Coverage of Evening of Excellence recognitions, including Dr. Chang’s MPAc Teacher of the Year award.",
+        "Evening of Excellence recognitions, including my MPAc Teacher of the Year award.",
       url: "https://gsm.ucdavis.edu/news/celebrating-our-2026-student-and-teacher-award-honorees",
+      image: "assets/images/news/evening-of-excellence.webp",
+      imageAlt: "Evening of Excellence award ceremony at UC Davis GSM",
     },
     {
       date: "2025",
       source: "UC Davis GSM",
       headline: "Five Voices. Four Pillars. One Vision for the Future of Business.",
       description:
-        "GSM perspectives on the school’s pillars and future of business education.",
+        "I join GSM colleagues sharing perspectives on leadership, diversity, AI, and empowerment.",
       url: "https://gsm.ucdavis.edu/blog/five-voices-four-pillars-one-vision-future-business",
+      image: "assets/images/news/five-voices.webp",
+      imageAlt: "Five Voices Four Pillars feature graphic",
     },
     {
       date: "2023",
       source: "UC Davis GSM",
       headline: "My Q&A with Janie Chang, New MPAc Academic Executive Director",
       description:
-        "Introductory conversation marking Dr. Chang’s appointment as MPAc Academic Executive Director.",
+        "An introductory conversation marking my appointment as MPAc Academic Executive Director.",
       url: "https://gsm.ucdavis.edu/blog/my-qa-janie-chang-new-mpac-academic-executive-director",
+      image: "assets/images/news/qa-janie-chang.webp",
+      imageAlt: "Portrait of Janie Chang as MPAc Academic Executive Director",
     },
     {
       date: "2025",
@@ -1462,16 +1468,20 @@ const PORTFOLIO_DATA = {
       headline:
         "Enhancing MPAc Curriculum: Advanced Tax and Machine Learning Courses",
       description:
-        "Overview of curriculum enhancements supporting advanced tax and machine learning coursework.",
+        "How we expanded MPAc electives in advanced tax and machine learning.",
       url: "https://gsm.ucdavis.edu/blog/enhancing-mpac-curriculum-advanced-tax-and-machine-learning-courses",
+      image: "assets/images/news/enhancing-mpac.webp",
+      imageAlt: "MPAc students collaborating at UC Davis GSM",
     },
     {
       date: "2025-06",
       source: "AACSB Insights",
       headline: "Rebuilding the Pipeline for Accounting Talent",
       description:
-        "AACSB Insights piece related to addressing the accounting workforce shortage.",
+        "My AACSB Insights contribution on addressing the accounting workforce shortage.",
       url: "https://www.aacsb.edu/insights/articles/2025/06/rebuilding-the-pipeline-for-accounting-talent",
+      image: "assets/images/news/aacsb-pipeline.jpg",
+      imageAlt: "Professionals collaborating on accounting talent pipeline",
     },
     {
       date: "2024",
@@ -1479,24 +1489,30 @@ const PORTFOLIO_DATA = {
       headline:
         "Choosing UC Davis Over NYU: Why the MPAc Program Felt Like Home",
       description:
-        "Student perspective on selecting the UC Davis MPAc program.",
+        "A student perspective on selecting the UC Davis MPAc program—and a PCAOB Scholars nomination I supported.",
       url: "https://gsm.ucdavis.edu/blog/choosing-uc-davis-over-nyu-why-mpac-program-felt-home",
+      image: "assets/images/news/choosing-uc-davis.webp",
+      imageAlt: "MPAc student Aliana Hernandez at UC Davis",
     },
     {
       date: "2025",
       source: "UC Davis GSM",
       headline: "Building AI Fluency Across the Business Curriculum",
       description:
-        "GSM initiatives on AI fluency across business programs.",
+        "How we are building AI fluency across GSM programs, including MPAc.",
       url: "https://gsm.ucdavis.edu/ai/curriculum",
+      image: "assets/images/news/ai-curriculum.webp",
+      imageAlt: "Janie Chang presenting on AI Transformation at UC Davis GSM",
     },
     {
       date: "2023",
       source: "McGraw Hill",
       headline: "The Evolution of Accounting Information Systems",
       description:
-        "Publisher session on the evolution of AIS education and related textbook materials.",
+        "A publisher session on the evolution of AIS education and our textbook materials.",
       url: "https://info.mheducation.com/TheEvolutionofAccountingInformationSystems_2.23_Registration.html",
+      image: "assets/images/news/ais-evolution.webp",
+      imageAlt: "Cover of Accounting Information Systems textbook",
     },
   ],
 

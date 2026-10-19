@@ -11,7 +11,7 @@
   }
 
   const data = PORTFOLIO_DATA;
-  const INITIAL_PUB_COUNT = 8;
+  const INITIAL_PUB_COUNT = 3;
 
   const state = {
     pubQuery: "",
@@ -605,12 +605,23 @@
       card.href = item.url;
       card.target = "_blank";
       card.rel = "noopener noreferrer";
-      card.appendChild(
+      if (item.image) {
+        const media = el("div", "news-card__media");
+        const img = el("img", "news-card__image");
+        img.src = item.image;
+        img.alt = item.imageAlt || item.headline;
+        img.loading = "lazy";
+        media.appendChild(img);
+        card.appendChild(media);
+      }
+      const body = el("div", "news-card__body");
+      body.appendChild(
         el("div", "news-card__meta", `${item.source} · ${item.date}`)
       );
-      card.appendChild(el("h3", null, item.headline));
-      card.appendChild(el("p", null, item.description));
-      card.appendChild(el("span", "news-card__cta", "Read original article →"));
+      body.appendChild(el("h3", null, item.headline));
+      body.appendChild(el("p", null, item.description));
+      body.appendChild(el("span", "news-card__cta", "Read original article →"));
+      card.appendChild(body);
       root.appendChild(card);
     });
   }
