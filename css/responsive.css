@@ -221,9 +221,14 @@
     width: 100%;
   }
 
-  .pub-card__actions {
+  .pub-card__top {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .pub-card__actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 

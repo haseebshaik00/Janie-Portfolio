@@ -66,6 +66,65 @@
     }
   }
 
+  const HIGHLIGHT_ICONS = {
+    "graduation-cap": [
+      "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z",
+      "M22 10v6",
+      "M6 12.5V16a6 3 0 0 0 12 0v-3.5",
+    ],
+    landmark: [
+      "M10 18v-7",
+      "M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z",
+      "M14 18v-7",
+      "M18 18v-7",
+      "M3 22h18",
+      "M6 18v-7",
+    ],
+    "book-open": [
+      "M12 5v16",
+      "M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z",
+    ],
+    award: [
+      "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",
+    ],
+  };
+
+  function createHighlightIcon(name) {
+    const paths = HIGHLIGHT_ICONS[name];
+    if (!paths) return null;
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "highlight__icon");
+    svg.setAttribute("width", "28");
+    svg.setAttribute("height", "28");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+
+    paths.forEach((d) => {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", d);
+      svg.appendChild(path);
+    });
+
+    if (name === "award") {
+      const circle = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle"
+      );
+      circle.setAttribute("cx", "12");
+      circle.setAttribute("cy", "8");
+      circle.setAttribute("r", "6");
+      svg.appendChild(circle);
+    }
+
+    return svg;
+  }
+
   /* ---------- Static section renderers ---------- */
   function renderHighlights() {
     const root = document.getElementById("highlights-grid");
@@ -73,8 +132,14 @@
     clear(root);
     data.highlights.forEach((item) => {
       const card = el("div", "highlight");
-      card.appendChild(el("span", "highlight__value", item.value));
-      card.appendChild(el("span", "highlight__label", item.label));
+      const body = el("div", "highlight__body");
+      const value = el("span", "highlight__value");
+      const icon = createHighlightIcon(item.icon);
+      if (icon) value.appendChild(icon);
+      value.appendChild(document.createTextNode(item.value));
+      body.appendChild(value);
+      body.appendChild(el("span", "highlight__label", item.label));
+      card.appendChild(body);
       root.appendChild(card);
     });
   }
@@ -171,6 +236,7 @@
       `pub-card${pub.featured ? " pub-card--featured" : ""}`
     );
 
+    const top = el("div", "pub-card__top");
     const meta = el("div", "pub-card__meta");
     meta.appendChild(el("span", "tag", String(pub.year)));
     meta.appendChild(
@@ -183,13 +249,7 @@
     (pub.tags || []).slice(0, 2).forEach((tag) => {
       meta.appendChild(el("span", "tag", tag));
     });
-    card.appendChild(meta);
-
-    const heading = el(headingLevel || "h3", null, pub.title);
-    card.appendChild(heading);
-    card.appendChild(el("p", "pub-card__authors", pub.authors));
-    card.appendChild(el("p", "pub-card__venue", formatVenue(pub)));
-    if (pub.note) card.appendChild(el("p", "text-muted", pub.note));
+    top.appendChild(meta);
 
     const actions = el("div", "pub-card__actions");
     const copyBtn = el("button", "btn btn--outline btn--small", "Copy Citation");
@@ -198,13 +258,20 @@
     actions.appendChild(copyBtn);
 
     if (pub.url) {
-      const link = el("a", "btn btn--ghost btn--small", "View Publication");
+      const link = el("a", "btn btn--gold btn--small", "View Publication");
       link.href = pub.url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       actions.appendChild(link);
     }
-    card.appendChild(actions);
+    top.appendChild(actions);
+    card.appendChild(top);
+
+    const heading = el(headingLevel || "h3", null, pub.title);
+    card.appendChild(heading);
+    card.appendChild(el("p", "pub-card__authors", pub.authors));
+    card.appendChild(el("p", "pub-card__venue", formatVenue(pub)));
+    if (pub.note) card.appendChild(el("p", "text-muted pub-card__note", pub.note));
     return card;
   }
 

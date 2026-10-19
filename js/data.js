@@ -14,7 +14,7 @@ const PORTFOLIO_DATA = {
     introduction:
       "Over three decades, I have connected accounting research, audit analytics, information systems, and emerging technologies to professional practice.",
     email: "cjchang@ucdavis.edu",
-    phone: "(530) 752-0512",
+    phone: "+1 (530) 752-0512",
     phoneTel: "+15307520512",
     office: "Room 3217, Gallagher Hall",
     address: "540 Alumni Lane, Davis, CA 95616",
@@ -33,17 +33,17 @@ const PORTFOLIO_DATA = {
   },
 
   highlights: [
-    { value: "30+", label: "Years of academic experience" },
-    { value: "43", label: "Refereed publications (April 2026 CV)" },
-    { value: "MPAc", label: "Academic Executive Director, UC Davis" },
-    { value: "AIS", label: "Co-author, Accounting Information Systems" },
+    { value: "30+", label: "Years of Academic Experience", icon: "graduation-cap" },
+    { value: "12+", label: "Academic Appointments", icon: "landmark" },
+    { value: "43+", label: "Refereed Publications", icon: "book-open" },
+    { value: "10+", label: "Awards & Honours", icon: "award" },
   ],
 
   about: {
     paragraphs: [
       "My expertise spans accounting information systems, audit analytics, managerial accounting, emerging technologies, financial reporting, human information processing, expert judgments, behavioral research, group decision making, and cross-cultural research.",
       "Previously, I served at San Diego State University as Vern Odmark Professor of Accountancy and twice held the William E. Cole Director position in the Charles W. Lamden School of Accountancy. Earlier academic roles include San José State University and California State University San Marcos.",
-      "Across more than three decades in higher education, I have integrated professional accounting knowledge with technology, data analysis, experiential learning, and academic leadership—bridging practitioners, researchers, faculty, and students.",
+      "Across more than three decades in higher education, I have integrated professional accounting knowledge with technology, data analysis, experiential learning, and academic leadership, bridging practitioners, researchers, faculty, and students.",
     ],
     researchExpertise:
       "Human information processing in accounting settings, behavioral issues in managerial accounting and auditing, nature of expert judgments, group decision making, accounting information systems, audit analytics, and cross-cultural research.",
