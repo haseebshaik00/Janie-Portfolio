@@ -115,12 +115,14 @@
         `timeline-card${appt.overlapping ? " timeline-card--overlap" : ""}`
       );
       const summary = el("summary", "timeline-card__summary");
-      summary.appendChild(el("div", "timeline-card__years", appt.years));
+      const head = el("div", "timeline-card__head");
+      head.appendChild(el("div", "timeline-card__years", appt.years));
+      if (appt.overlapNote) {
+        head.appendChild(el("span", "overlap-badge", appt.overlapNote));
+      }
+      summary.appendChild(head);
       summary.appendChild(el("h3", "timeline-card__title", appt.title));
       summary.appendChild(el("p", "timeline-card__org", appt.organization));
-      if (appt.overlapNote) {
-        summary.appendChild(el("span", "overlap-badge", appt.overlapNote));
-      }
       details.appendChild(summary);
 
       const body = el("div", "timeline-card__body");
@@ -319,7 +321,7 @@
     visible.forEach((pub) => listRoot.appendChild(createPubCard(pub, "h3")));
 
     if (countEl) {
-      countEl.textContent = `Showing ${visible.length} of ${filtered.length} matching publications (${data.publications.length} total in CV bibliography).`;
+      countEl.textContent = `Showing ${visible.length} of ${filtered.length} publications`;
     }
 
     if (toggle) {
@@ -329,17 +331,15 @@
         toggle.classList.remove("is-hidden");
         toggle.textContent = state.showAllPubs
           ? "Show fewer publications"
-          : `Show all ${filtered.length} matching publications`;
+          : `Show all ${filtered.length} publications`;
       }
     }
   }
 
   function renderBooks() {
     const feature = document.getElementById("books-feature");
-    const editions = document.getElementById("editions-grid");
     const scholarship = document.getElementById("scholarship-grid");
     const featured = data.books.find((b) => b.featured) || data.books[1];
-    const forthcoming = data.books.find((b) => b.status === "forthcoming");
 
     if (feature && featured) {
       clear(feature);
@@ -367,8 +367,7 @@
       );
       body.appendChild(el("p", "text-muted", featured.description));
 
-      const actions = el("div", "contact-actions");
-      actions.style.marginTop = "1rem";
+      const actions = el("div", "book-actions");
       if (featured.url) {
         const link = el("a", "btn btn--primary", "View at McGraw Hill");
         link.href = featured.url;
@@ -376,41 +375,28 @@
         link.rel = "noopener noreferrer";
         actions.appendChild(link);
       }
-      body.appendChild(actions);
 
-      if (forthcoming) {
-        const note = el(
-          "p",
-          "grants-total",
-          `${forthcoming.title} — ${forthcoming.edition} (${forthcoming.year}) is forthcoming and not yet published.`
-        );
-        note.style.marginTop = "1rem";
-        body.appendChild(note);
-      }
-
-      wrap.appendChild(body);
-      feature.appendChild(wrap);
-    }
-
-    if (editions) {
-      clear(editions);
       data.books
         .filter((b) => b.id !== featured.id)
         .forEach((book) => {
-          const card = el("article", "edition-card");
+          const card = el("article", "edition-card edition-card--compact");
           card.appendChild(el("h4", null, `${book.edition} (${book.year})`));
-          card.appendChild(el("p", null, book.title));
           card.appendChild(
             el(
               "p",
               "text-muted",
               book.status === "forthcoming"
-                ? "Status: Forthcoming"
-                : `ISBN: ${book.isbn || "—"}`
+                ? "Forthcoming"
+                : `ISBN ${book.isbn || "—"}`
             )
           );
-          editions.appendChild(card);
+          actions.appendChild(card);
         });
+
+      body.appendChild(actions);
+
+      wrap.appendChild(body);
+      feature.appendChild(wrap);
     }
 
     if (scholarship) {
@@ -506,21 +492,17 @@
     data.awards.forEach((award) => {
       const item = el("article", "award-item");
       item.appendChild(el("div", "award-item__year", award.year));
-      const body = el("div");
+      const body = el("div", "award-item__body");
       body.appendChild(el("h3", null, award.title));
-      body.appendChild(el("p", null, award.organization));
-      if (award.note) body.appendChild(el("p", "text-muted", award.note));
-      if (award.collaborative) {
-        body.appendChild(
-          el("p", "text-muted", "Collaborative award — not an individual-only honor.")
-        );
-      }
+      body.appendChild(el("p", "award-item__org", award.organization));
       if (award.url) {
-        const link = el("a", null, "Read announcement");
+        const link = el("a", "award-item__link", "Read announcement");
         link.href = award.url;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         body.appendChild(link);
+      } else {
+        body.appendChild(el("span", "award-item__link award-item__link--spacer", "\u00a0"));
       }
       item.appendChild(body);
       root.appendChild(item);
@@ -605,6 +587,14 @@
       card.href = item.url;
       card.target = "_blank";
       card.rel = "noopener noreferrer";
+      const body = el("div", "news-card__body");
+      body.appendChild(
+        el("div", "news-card__meta", `${item.source} · ${item.date}`)
+      );
+      body.appendChild(el("h3", null, item.headline));
+      body.appendChild(el("p", null, item.description));
+      body.appendChild(el("span", "news-card__cta", "Read original article →"));
+      card.appendChild(body);
       if (item.image) {
         const media = el("div", "news-card__media");
         const img = el("img", "news-card__image");
@@ -614,14 +604,6 @@
         media.appendChild(img);
         card.appendChild(media);
       }
-      const body = el("div", "news-card__body");
-      body.appendChild(
-        el("div", "news-card__meta", `${item.source} · ${item.date}`)
-      );
-      body.appendChild(el("h3", null, item.headline));
-      body.appendChild(el("p", null, item.description));
-      body.appendChild(el("span", "news-card__cta", "Read original article →"));
-      card.appendChild(body);
       root.appendChild(card);
     });
   }

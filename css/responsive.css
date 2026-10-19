@@ -16,6 +16,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .awards-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .filters {
     grid-template-columns: 1fr 1fr;
   }
@@ -93,13 +97,17 @@
     width: 100%;
   }
 
-  .editions,
   .scholarship-grid,
   .tech-grid,
   .news-grid,
   .grants-grid,
-  .visiting-grid {
+  .visiting-grid,
+  .timeline {
     grid-template-columns: 1fr;
+  }
+
+  .awards-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .working-paper {
@@ -127,8 +135,14 @@
   }
 
   .book-feature .hero__actions,
-  .book-feature .contact-actions {
+  .book-feature .contact-actions,
+  .book-feature .book-actions {
     justify-content: center;
+  }
+
+  .edition-card--compact {
+    max-width: none;
+    flex: 1 1 calc(50% - 0.5rem);
   }
 
   .book-cover {
@@ -142,27 +156,13 @@
     grid-template-columns: 1fr;
   }
 
-  .award-item {
-    grid-template-columns: 1fr;
-    gap: var(--space-2);
-  }
-
-  .award-item__year {
-    border-right: 0;
-    border-bottom: 2px solid var(--gold);
-    padding-right: 0;
-    padding-bottom: 0.35rem;
-    width: fit-content;
-  }
-
   .contact-list li {
     grid-template-columns: 1fr;
     gap: 0.2rem;
   }
 
-  .timeline-card__summary::after {
-    position: static;
-    margin-top: 0.5rem;
+  .timeline-card__summary {
+    padding-right: 2.75rem;
   }
 
   .site-footer__inner {
@@ -178,6 +178,24 @@
     justify-self: start;
     text-align: left;
   }
+
+  .news-card__media {
+    flex-basis: 120px;
+    width: 120px;
+  }
+
+  .news-card__body {
+    padding: var(--space-3);
+  }
+
+  .news-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .news-card p {
+    -webkit-line-clamp: 2;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -185,7 +203,8 @@
     width: min(100% - 1.25rem, var(--container));
   }
 
-  .highlights__grid {
+  .highlights__grid,
+  .awards-list {
     grid-template-columns: 1fr;
   }
 

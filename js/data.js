@@ -41,7 +41,6 @@ const PORTFOLIO_DATA = {
 
   about: {
     paragraphs: [
-      "I am Academic Executive Director of the Master of Professional Accountancy (MPAc) program at the UC Davis Graduate School of Management.",
       "My expertise spans accounting information systems, audit analytics, managerial accounting, emerging technologies, financial reporting, human information processing, expert judgments, behavioral research, group decision making, and cross-cultural research.",
       "Previously, I served at San Diego State University as Vern Odmark Professor of Accountancy and twice held the William E. Cole Director position in the Charles W. Lamden School of Accountancy. Earlier academic roles include San José State University and California State University San Marcos.",
       "Across more than three decades in higher education, I have integrated professional accounting knowledge with technology, data analysis, experiential learning, and academic leadership—bridging practitioners, researchers, faculty, and students.",
@@ -1267,14 +1266,12 @@ const PORTFOLIO_DATA = {
       year: "2026",
       title: "Teacher of the Year",
       organization: "UC Davis MPAc, Graduate School of Management",
-      note: "Evening of Excellence; confirmed via GSM news announcement",
       url: "https://gsm.ucdavis.edu/news/celebrating-our-2026-student-and-teacher-award-honorees",
     },
     {
       year: "2025",
       title: "Most Influential Faculty",
       organization: "SDSU MS Cybersecurity Management",
-      note: "Recognized in the academic career of Ross Warren",
     },
     {
       year: "2025",
@@ -1285,18 +1282,16 @@ const PORTFOLIO_DATA = {
       year: "2023",
       title: "Most Influential Faculty",
       organization: "SDSU MS Accountancy",
-      note: "Recognized in the academic career of Thanh Dung Ha",
     },
     {
       year: "2020–2021",
-      title: "Alumni Association Award for Outstanding Faculty Contributions (Monty Award)",
-      organization: "San Diego State University",
+      title: "Monty Award: Alumni Association Award",
+      organization: "Outstanding Faculty Contributions, San Diego State University",
     },
     {
       year: "2020",
       title: "Most Influential Faculty",
       organization: "SDSU MS Accountancy",
-      note: "Recognized in the academic career of Matthew Kerr",
     },
     {
       year: "2019",
@@ -1307,20 +1302,17 @@ const PORTFOLIO_DATA = {
       year: "2017",
       title: "Provost’s Innovation for Excellence Award",
       organization: "San Diego State University",
-      note: "Collaborative ERP/SAP initiative award shared with Charles W. Lamden School of Accountancy and Department of MIS (application by C. Janie Chang and Helio Y. Yang)",
       collaborative: true,
     },
     {
       year: "2017",
       title: "Mortar Board Outstanding Faculty Recognition",
       organization: "The Mortar Board National College Senior Honor Society, SDSU",
-      note: "Recognized in the academic career of Janella V. Samson",
     },
     {
       year: "2015",
       title: "Most Influential Faculty",
       organization: "SDSU MS Accountancy",
-      note: "Recognized in the academic career of Isaac Peck",
     },
   ],
 
@@ -1433,14 +1425,14 @@ const PORTFOLIO_DATA = {
 
   news: [
     {
-      date: "2026-06-04",
+      date: "2025",
       source: "UC Davis GSM",
-      headline: "Celebrating Our 2026 Student and Teacher Award Honorees",
+      headline: "Building AI Fluency Across the Business Curriculum",
       description:
-        "Evening of Excellence recognitions, including my MPAc Teacher of the Year award.",
-      url: "https://gsm.ucdavis.edu/news/celebrating-our-2026-student-and-teacher-award-honorees",
-      image: "assets/images/news/evening-of-excellence.webp",
-      imageAlt: "Evening of Excellence award ceremony at UC Davis GSM",
+        "How we are building AI fluency across GSM programs, including MPAc.",
+      url: "https://gsm.ucdavis.edu/ai/curriculum",
+      image: "assets/images/news/ai-curriculum.webp",
+      imageAlt: "Janie Chang presenting on AI Transformation at UC Davis GSM",
     },
     {
       date: "2025",
@@ -1461,48 +1453,6 @@ const PORTFOLIO_DATA = {
       url: "https://gsm.ucdavis.edu/blog/my-qa-janie-chang-new-mpac-academic-executive-director",
       image: "assets/images/news/qa-janie-chang.webp",
       imageAlt: "Portrait of Janie Chang as MPAc Academic Executive Director",
-    },
-    {
-      date: "2025",
-      source: "UC Davis GSM",
-      headline:
-        "Enhancing MPAc Curriculum: Advanced Tax and Machine Learning Courses",
-      description:
-        "How we expanded MPAc electives in advanced tax and machine learning.",
-      url: "https://gsm.ucdavis.edu/blog/enhancing-mpac-curriculum-advanced-tax-and-machine-learning-courses",
-      image: "assets/images/news/enhancing-mpac.webp",
-      imageAlt: "MPAc students collaborating at UC Davis GSM",
-    },
-    {
-      date: "2025-06",
-      source: "AACSB Insights",
-      headline: "Rebuilding the Pipeline for Accounting Talent",
-      description:
-        "My AACSB Insights contribution on addressing the accounting workforce shortage.",
-      url: "https://www.aacsb.edu/insights/articles/2025/06/rebuilding-the-pipeline-for-accounting-talent",
-      image: "assets/images/news/aacsb-pipeline.jpg",
-      imageAlt: "Professionals collaborating on accounting talent pipeline",
-    },
-    {
-      date: "2024",
-      source: "UC Davis GSM",
-      headline:
-        "Choosing UC Davis Over NYU: Why the MPAc Program Felt Like Home",
-      description:
-        "A student perspective on selecting the UC Davis MPAc program—and a PCAOB Scholars nomination I supported.",
-      url: "https://gsm.ucdavis.edu/blog/choosing-uc-davis-over-nyu-why-mpac-program-felt-home",
-      image: "assets/images/news/choosing-uc-davis.webp",
-      imageAlt: "MPAc student Aliana Hernandez at UC Davis",
-    },
-    {
-      date: "2025",
-      source: "UC Davis GSM",
-      headline: "Building AI Fluency Across the Business Curriculum",
-      description:
-        "How we are building AI fluency across GSM programs, including MPAc.",
-      url: "https://gsm.ucdavis.edu/ai/curriculum",
-      image: "assets/images/news/ai-curriculum.webp",
-      imageAlt: "Janie Chang presenting on AI Transformation at UC Davis GSM",
     },
     {
       date: "2023",
