@@ -4,7 +4,15 @@ Independent, static academic portfolio website for **Dr. C. Janie Chang**, Acade
 
 This is a personal professional portfolio inspired by the visual language of the [UC Davis GSM faculty page](https://gsm.ucdavis.edu/faculty/c-janie-chang). It is **not** an official university website.
 
-> **Before public deployment:** content, images, and representation should be reviewed and approved by Dr. Chang.
+**Production URL (GitHub Pages):** https://haseebshaik00.github.io/Janie-Portfolio/
+
+## Pre-launch human checklist
+
+Code-side deploy readiness items (SEO URLs, robots/sitemap, Featured Research, hero cleanup) are in place. Before treating the site as a public professional launch, still confirm:
+
+- [ ] **Dr. Chang** has reviewed and approved content, first-person voice, and representation
+- [ ] **Image rights** for portrait, textbook cover, and news images (see [`assets/images/README.md`](assets/images/README.md))
+- [ ] If using a custom domain instead of GitHub Pages, update canonical / Open Graph / Twitter / `robots.txt` / `sitemap.xml` to that domain
 
 ## Tech stack
 
@@ -81,15 +89,19 @@ Current local files are development copies from public faculty/publisher sources
 
 ### GitHub Pages
 
-1. Push this repository to GitHub.
-2. Settings → Pages → Source: Deploy from branch `main` / root (or `/docs` if you move files).
-3. Update `canonical` / Open Graph URLs in `index.html`, plus `robots.txt` and `sitemap.xml`, replacing `https://example.com/`.
+1. Push this repository to GitHub (`main`).
+2. Settings → Pages → Source: Deploy from branch `main` / root.
+3. Site URL: https://haseebshaik00.github.io/Janie-Portfolio/
+4. SEO files already use that URL in `index.html`, `robots.txt`, and `sitemap.xml`.
 
-### Netlify
+### Netlify (or custom domain)
 
 1. Connect the repository in Netlify.
 2. Build command: *(none)* — publish directory: repository root.
-3. Update canonical and sitemap URLs to the production domain.
+3. Replace `https://haseebshaik00.github.io/Janie-Portfolio/` with the production domain in:
+   - `index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`)
+   - `robots.txt`
+   - `sitemap.xml`
 
 ## Primary sources
 
@@ -117,7 +129,7 @@ Current local files are development copies from public faculty/publisher sources
 - Smooth scrolling and scroll-to-top
 - Expandable experience timeline
 - Publication search, year/category filters, sorting
-- Show all / show fewer publications
+- Featured research list + show all / show fewer publications
 - Copy citation
 - Accessible accordion for additional service details
 - IntersectionObserver entrance animations (disabled under `prefers-reduced-motion`)
@@ -125,7 +137,10 @@ Current local files are development copies from public faculty/publisher sources
 ## Accessibility & SEO
 
 - Semantic landmarks and one `h1`
-- Open Graph + JSON-LD `Person` schema (verified facts only)
+- Canonical + Open Graph + Twitter cards pointing at the GitHub Pages URL
+- Absolute Open Graph / Twitter image URL
+- `robots.txt` and `sitemap.xml`
+- JSON-LD `Person` schema (verified facts only)
 - Visible focus styles, keyboard-friendly navigation
 - Lazy-loaded non-critical images
-- Mobile-friendly viewport and no horizontal overflow intent
+- Mobile-friendly viewport
